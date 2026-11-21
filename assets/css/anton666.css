@@ -11622,7 +11622,14 @@ pre .code {
 
 .contact {
   position: relative;
-  min-height: 700px;
+  min-height: 600px;
+  background-color: #212529;
+  background-image: -webkit-linear-gradient(bottom, rgba(33, 37, 41, 0.92), rgba(33, 37, 41, 0.92)), url(../imgs/header.jpg);
+  background-image: linear-gradient(to top, rgba(33, 37, 41, 0.92), rgba(33, 37, 41, 0.92)), url(../imgs/header.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11635,12 +11642,12 @@ pre .code {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 40px 0;
+  padding: 60px 0;
 }
 
 @media (max-width: 991.98px) {
   .contact {
-    padding: 300px 0 0;
+    padding: 60px 0 40px;
   }
   .contact .contact-form-card {
     border-bottom: 1px solid #dee2e6;
@@ -11652,11 +11659,7 @@ pre .code {
 }
 
 .contact .map {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  display: none;
 }
 
 .contact .contact-form-card,
