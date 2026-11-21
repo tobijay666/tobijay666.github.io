@@ -16,7 +16,7 @@
 $(document).ready(function(){
     $(".navbar .nav-link").on('click', function(event) {
 
-        if (this.hash !== "") {
+        if (this.hash !== "" && $(this.hash).length > 0) {
 
             event.preventDefault();
 
@@ -58,8 +58,9 @@ $(window).on("load", function() {
 
 // google maps
 function initMap() {
-// Styles a map in night mode.
-    var map = new google.maps.Map(document.getElementById('map'), {
+    var mapEl = document.getElementById('map');
+    if (!mapEl) return;
+    var map = new google.maps.Map(mapEl, {
         center: {lat: 40.674, lng: -73.945},
         zoom: 12,
         scrollwheel:  false,
